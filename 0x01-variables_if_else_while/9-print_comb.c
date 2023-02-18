@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-int n1, n2;
+int n;
 for (n = 0; n < 10; n++)
 {
 putchar(n + '0');
