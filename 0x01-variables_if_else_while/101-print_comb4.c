@@ -19,7 +19,7 @@ for (n1 = 1; n1 < 10; n1++)
 				putchar(n1 + '0');
 				putchar(n2 + '0');
 				putchar(n3 + '0');
-				if (ni != 7 && n2 != 8 && n3 != 9)
+				if (n1 != 7 && n2 != 8 && n3 != 9)
 				{
 					putchar(',');
 					putchar(' ');
