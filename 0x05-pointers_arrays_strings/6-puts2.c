@@ -4,12 +4,12 @@
 
 /**
  *puts2 - prints every other number
- *@str - charater
+ *@str: - charater
  */
 
 void puts2(char *str)
 {
-	char len = strlen(str);
+	int len = strlen(str);
 	int i;
 
 	for (i = 0; i < len; i += 2)
