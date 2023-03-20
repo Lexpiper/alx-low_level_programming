@@ -1,5 +1,5 @@
-#ifndef CONFIG_H
-#define CONFIG_H
+#ifndef SIZE
+#define SIZE
 
 #define SIZE 1024
 
