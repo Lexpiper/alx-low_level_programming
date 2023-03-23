@@ -4,7 +4,7 @@
 /**
  * sum_them_all - sums
  * @n: count of arguments
- * 
+ *
  * Return: return 0 if n == o
  */
 
@@ -16,7 +16,7 @@ int sum_them_all(const unsigned int n, ...)
 	int result = 0;
 
 	if (n == 0)
-		return 0;
+		return (0);
 	va_start(sum, n);
 
 	for (i = 0; i < n; i++)
