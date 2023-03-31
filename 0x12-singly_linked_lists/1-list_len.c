@@ -1,20 +1,18 @@
 #include "lists.h"
 /**
- * list_len - this function count the elements in a linked list
- * @h: pointer to list
- * Return: number of elements in list
+ * list_len - function that returns the number of elements in a linked list
+ * @h: pointer to the given node
+ * Return: number of elements
  */
 size_t list_len(const list_t *h)
 {
-	unsigned int elementNum = 0;
+	unsigned int count;
 
+	count = 0;
 	while (h != NULL)
 	{
-		/*if (h->str == NULL)*/
-			/*break;*/
+		count++;
 		h = h->next;
-		elementNum++;
 	}
-
-	return (elementNum);
+	return (count);
 }
