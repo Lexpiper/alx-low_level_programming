@@ -8,35 +8,55 @@
  *Return: Address of the new node
  *		or NULL if the list is empty
  */
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *temp, *newnode;
-
-	unsigned int count = 1;
-
-	temp = *head;
+	unsigned int nodes = 0;
+	listint_t *node_index = *head;
+	listint_t *new_node, *node_after;
 
 	if (head == NULL)
-	{
 		return (NULL);
+
+	while (node_index != NULL)
+	{
+		node_index = node_index->next;
+		nodes++;
+	}
+
+	if (idx > (nodes + 1))
+		return (NULL);
+
+	node_index = *head;
+
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->n = n;
+
+	if (idx == 0)
+	{
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
 	}
 	else
 	{
-		if (idx > count)
-			return (NULL);
-
-		newnode = (listint_t *)malloc(sizeof(listint_t));
-		newnode->n = n;
-
-		while (count < idx)
+		node_after = *head;
+		nodes = 0;
+		while (nodes < (idx - 1))
 		{
-			temp = temp->next;
-			count++;
+			node_index = node_index->next;
+			nodes++;
 		}
-		newnode->next = temp->next;
-		temp->next = newnode;
+		nodes = 0;
+		while (nodes < idx)
+		{
+			node_after = node_after->next;
+			nodes++;
+		}
+		node_index->next = new_node;
+		new_node->next = node_after;
+		return (new_node);
 	}
-	return (newnode);
 }
 
