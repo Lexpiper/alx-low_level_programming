@@ -1,7 +1,7 @@
-#include "lists.h"
+#include "main.h"
 
 /**
- *function that converts a binary number to an unsigned int
+ *binary_to_uint - converts a binary number to an unsigned int
  *@b: pointing to a string
  *
  *
@@ -12,25 +12,20 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int result = 0;
-	int len =strlen(b);
-	unsigned int i;
+	int i, len;
 
-	while (i < len)
+	len = strlen(b);
+
+	if (b == NULL)
+		return (0);
+
+	for (i = 0; i < len; i++)
 	{
-		if (b[i] == '0')
-		{
-			result = result << 1;
-		}
-		else if (b[i] == '1')
-		{
-			result = (result << 1) | 1;
-		}
-		else
-		{
+		if (b[i] < '0' || b[i] > '1')
 			return (0);
-		}
+
+		result = (result << 1) | (b[i] - '0');
 	}
-
-
 	return (result);
 }
+
