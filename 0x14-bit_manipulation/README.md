@@ -1,6 +1,7 @@
 # BIT MANIPLATION
 
-Bit manipulation refers to the manipulation of individual bits within a binary data. Bit manipulation is a very useful technique in computer programming and is often used to optimize code and perform low-level operations on data.
+_Bit manipulation_
+ refers to the manipulation of individual bits within a binary data. Bit manipulation is a very useful technique in computer programming and is often used to optimize code and perform low-level operations on data.
 
 In computer programming, we can perform bit manipulation using bitwise operators, such as AND (&), OR (|), XOR (^), NOT (~), left-shift (<<), and right-shift (>>).
 
